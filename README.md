@@ -14,6 +14,15 @@ Repo: [link to github repo](https://github.com/havard024/nightwatch-test)
 
 - git [git homepage](https://git-scm.com/) unless you want to download the repo as zip.
 - node [node installation instructions from nightwatch](https://nightwatchjs.org/gettingstarted/installation/#install-node-js)
+
+Project was created with the following versions of node and npm:
+
+```
+$ node -v
+v10.15.3
+$ npm -v
+6.11.3
+```
                                                    
 
 # Get Started
