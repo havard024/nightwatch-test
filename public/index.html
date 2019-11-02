@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login with nightwatch</title>
+</head>
+<body style="height: 100vh;">
+
+    <div style="display: flex; align-items: center; justify-content: center; height: 100vh; flex-direction: column;">
+        <h2>Login with nightwatch</h2>
+
+        <form onsubmit="login(event)">
+            username: <input name="username"> <br />
+            password: <input name="passwvord"> <br />
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <div id="loading-container" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0,0,0,0.5); text-align: center; display: none;">
+        <div style="display: flex; align-items: center; justify-content: center; height: 100vh;">
+            <div style="max-width: 50%; padding: 20px; background-color: white;">
+                Loading...
+            </div>
+        </div>
+    </div>
+    <script>
+        function login(e) {
+          e.preventDefault();
+          var el = document.getElementById('loading-container');
+          el.style.display = 'block';
+          setTimeout(function() {
+            el.style.display = 'none';
+            window.location = 'loggedin'
+          }, 3000);
+          return false;
+        }
+    </script>
+</body>
+</html>
